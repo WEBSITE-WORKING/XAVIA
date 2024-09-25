@@ -93,7 +93,7 @@ async function onCall({ message, args, getLang, userPermissions, prefix }) {
         }
 
         let list = Object.keys(commands)
-            .map(category => `⌈ ${category.toUpperCase()} ⌋\n${commands[category].join(", ")}`)
+            .map(category => `╭────────────⭓\n│𝗔𝗥𝗬𝗔𝗡 𝗔𝗥𝗢𝗛𝗜\n╰────────────⭓\n\n╭────────────⭓⌈ ${category.toUpperCase()} ⌋\n${commands\n[category].join(", ")}╰────────────⭓`)
             .join("\n\n");
 
         message.reply(getLang("help.list", {
